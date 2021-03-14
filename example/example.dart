@@ -12,8 +12,14 @@ void main() {
 
   // String to List<Person>
   string = '[{"name": "Jack"}, {"name": "John"}]';
-  var personList = string.jsonList((e) => Person.fromJson(e));
-  assert(personList[1].name == 'John');
+  var persons = string.jsonList((e) => Person.fromJson(e));
+  assert(persons[1].name == 'John');
+
+  // String to Map<Person>
+  string =
+      '{"Jack Shephard": {"name": "Jack"}, "John Locke": {"name": "John"}}';
+  final personMap = string.jsonMap((e) => Person.fromJson(e));
+  assert(personMap['John Locke']!.name == 'John');
 
   // Map to Person
   map = {'name': 'Jack'};
@@ -29,8 +35,8 @@ void main() {
     {'name': 'Jack'},
     {'name': 'John'}
   ];
-  personList = list.json((e) => Person.fromJson(e));
-  assert(personList[1].name == 'John');
+  persons = list.json((e) => Person.fromJson(e));
+  assert(persons[1].name == 'John');
 }
 
 class Person {

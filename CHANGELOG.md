@@ -1,3 +1,7 @@
+## 0.1.5
+
+- Added `String.jsonMap` method (not very often used)
+
 ## 0.1.4
 
 - Minor fixes in the `example.dart` file
