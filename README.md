@@ -2,7 +2,7 @@
 
 The `json_helpers` contains functions that make it easier decoding JSON objects directly from strings, lists and maps.
 
-Version 0.1.3
+Version 0.1.4
 
 Allows you to simplify decoding JSON objects directly from `String`, `List` and `Map` values.  
 Easy to use (by calling one method).  
@@ -38,7 +38,7 @@ void main() {
   person = fromJson(map, (e) => Person.fromJson(e));
   assert(person.name == 'Jack');
 
-  // List<Map> to Person
+  // List<Map> to List<Person>
   list = [
     {'name': 'Jack'},
     {'name': 'John'}
