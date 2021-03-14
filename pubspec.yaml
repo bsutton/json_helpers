@@ -1,5 +1,5 @@
 name: json_helpers
-version: 0.1.5
+version: 0.1.6
 description: The `json_helpers` contains functions that make it easier decoding JSON objects directly from strings, lists and maps.
 homepage: https://github.com/mezoni/json_helpers
 environment:

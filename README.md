@@ -2,7 +2,7 @@
 
 The `json_helpers` contains functions that make it easier decoding JSON objects directly from strings, lists and maps.
 
-Version 0.1.5
+Version 0.1.6
 
 Allows you to simplify decoding JSON objects directly from `String`, `List` and `Map` values.  
 Easy to use (by calling one method).  
@@ -29,7 +29,7 @@ void main() {
   var persons = string.jsonList((e) => Person.fromJson(e));
   assert(persons[1].name == 'John');
 
-  // String to Map<Person>
+  // String to Map<Stribg, Person>
   string =
       '{"Jack Shephard": {"name": "Jack"}, "John Locke": {"name": "John"}}';
   final personMap = string.jsonMap((e) => Person.fromJson(e));

@@ -15,7 +15,7 @@ void main() {
   var persons = string.jsonList((e) => Person.fromJson(e));
   assert(persons[1].name == 'John');
 
-  // String to Map<Person>
+  // String to Map<Stribg, Person>
   string =
       '{"Jack Shephard": {"name": "Jack"}, "John Locke": {"name": "John"}}';
   final personMap = string.jsonMap((e) => Person.fromJson(e));
