@@ -1,3 +1,7 @@
+## 0.1.4
+
+- Minor fixes in the `example.dart` file
+
 ## 0.1.3
 
 - Added `homepage` to `pubspec.yaml`

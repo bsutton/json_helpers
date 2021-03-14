@@ -24,7 +24,7 @@ void main() {
   person = fromJson(map, (e) => Person.fromJson(e));
   assert(person.name == 'Jack');
 
-  // List<Map> to Person
+  // List<Map> to List<Person>
   list = [
     {'name': 'Jack'},
     {'name': 'John'}
@@ -40,15 +40,6 @@ class Person {
 
   factory Person.fromJson(Map<String, dynamic> json) {
     return Person(name: (json['name'] as String?) ?? '');
-  }
-
-  @override
-  bool operator ==(other) {
-    if (other is Person) {
-      return name == other.name;
-    }
-
-    return false;
   }
 
   Map<String, dynamic> toJson() => {'name': name};
